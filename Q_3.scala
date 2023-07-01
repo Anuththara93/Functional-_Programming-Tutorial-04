@@ -32,7 +32,7 @@ object Q_3 {
   def selectChoice(choice : Int, inputName : String): String = {
     choice match {
       case 1 => formatNames (inputName, toUpper)
-      case 2 => formatNames (inputName, str => str.head + (str.charAt(1).toUpper + str.tail.drop(1)))
+      case 2 => formatNames (inputName, str => str.head + (str.charAt(1).toUpper + str.drop(1)))
       case 3 => formatNames (inputName, toLower)
       case 4 => formatNames (inputName, str => str.init + str.last.toUpper)
       case _ => "You made an Invalid choice"
