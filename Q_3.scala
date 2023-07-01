@@ -1,13 +1,12 @@
 object Q_3 {
   def main(args : Array[String]): Unit = {
-    print("Enter the name that you want to format - ")
-    val inputName = scala.io.StdIn.readLine()
+    val inputName = scala.io.StdIn.readLine("Enter the name that you want to format - ")
 
     println()
     println("1 - Format the name to uppercase")
-    println("2 - Capitalizes the second letter of the name")
+    println("2 - Capitalize the second letter of the name")
     println("3 - Format the name to lowercase")
-    println("4 - Capitalizes the last letter of the name")
+    println("4 - Capitalize the last letter of the name")
     println()
 
     print("Enter your choice - ")
@@ -32,7 +31,7 @@ object Q_3 {
   def selectChoice(choice : Int, inputName : String): String = {
     choice match {
       case 1 => formatNames (inputName, toUpper)
-      case 2 => formatNames (inputName, str => str.head + (str.charAt(1).toUpper + str.drop(1)))
+      case 2 => formatNames (inputName, str => str.head + (str.charAt(1).toUpper + str.drop(2)))
       case 3 => formatNames (inputName, toLower)
       case 4 => formatNames (inputName, str => str.init + str.last.toUpper)
       case _ => "You made an Invalid choice"
